@@ -18,6 +18,9 @@ export function App() {
   const [wordToGuess, setWordToGuess] = useState(getWord);
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [hintUsed, setHintUsed] = useState(false)
+  const [currentHint, setCurrentHint] = useState<string | null> (null)
+  const [hintCount, setHintCount] = useState(0)
+
 
   const incorrectLetters = guessedLetters.filter(
     (letter) => !wordToGuess.includes(letter),
@@ -70,13 +73,26 @@ export function App() {
     };
   }, []);
 
+  const MaxHint = 2;
 
-  //1 letter hint
+  
+  // const handleHint = () => {
+  //   if (hintCount < MaxHint) {
+  //     setCurrentHint(words[hintCount])
+  //     setHintCount((prev) => prev +1)
+  //   }
+  // }
+  // show hint whenever and unlimited
   const revealLetter =() => {
     if ( isWinner || isLoser) return;
     const hintLetter = getRandomUnrevealedLetter(wordToGuess, guessedLetters)
 
-  if (hintLetter){
+    if (hintCount < MaxHint) {
+      setCurrentHint(words[hintCount])
+      setHintCount((prev) => prev +1)
+    }
+    
+    if (hintLetter){
     setGuessedLetters((current) => [...current, hintLetter]) 
     }
   }
@@ -115,9 +131,9 @@ export function App() {
       <div style={{ margin: "20px" }}>
         <button
           onClick={revealLetter}
-          disabled={ isWinner || isLoser}
+          disabled={ hintCount >= MaxHint || isWinner || isLoser}
         >
-          💡Get Hint
+          💡Get Hint ({MaxHint - hintCount} left)
         </button>
       </div>
         <Keyboard
