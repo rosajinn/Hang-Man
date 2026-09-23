@@ -17,12 +17,12 @@ export function HangmanWord({guessedLetters, wordToGuess, reveal=false}: Hangman
       }}
     >
       {wordToGuess.split("").map((letter, index) => (
-        <span key={index} style={{ borderBottom: ".1em solid black" }}>
+        <span key={index} style={{ borderBottom: ".1em solid white" }}>
             <span style = {{ visibility: guessedLetters.includes(letter) || reveal
                 ? "visible"
                 : "hidden",
             color: !guessedLetters.includes(letter) && reveal ?
-                "red" : "black"
+                "red" : "white"
             }}>
             {letter}
             </span>

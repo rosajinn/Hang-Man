@@ -4,7 +4,7 @@ const HEAD =(
         height: "50px",
         width: "50px",
         borderRadius: "100%",
-        border: "10px solid black",
+        border: "10px solid white",
         position: "absolute",
         top: "50px",
         right: "450px"
@@ -14,7 +14,7 @@ const BODY =(
     <div style = {{
         height: "100px",
         width: "10px",
-        background: "black",
+        background: "white",
         position: "absolute",
         top: "110px",
         right: "480px"
@@ -24,7 +24,7 @@ const RIGHT_ARM =(
     <div style = {{
         height: "10px",
         width: "100px",
-        background: "black",
+        background: "white",
         position: "absolute",
         top: "160px",
         right: "470px",
@@ -36,7 +36,7 @@ const LEFT_ARM =(
     <div style = {{
         height: "10px",
         width: "100px",
-        background: "black",
+        background: "white",
         position: "absolute",
         top: "160px",
         right: "400px",
@@ -48,7 +48,7 @@ const RIGHT_LEG =(
     <div style = {{
         height: "10px",
         width: "100px",
-        background: "black",
+        background: "white",
         position: "absolute",
         top: "200px",
         right: "390px",
@@ -60,7 +60,7 @@ const LEFT_LEG =(
     <div style = {{
         height: "10px",
         width: "100px",
-        background: "black",
+        background: "white",
         position: "absolute",
         top: "200px",
         right: "480px",
@@ -79,26 +79,26 @@ export function HangmanDrawing({numberOfGuesses} : HangmanDrawingProps) {
         <div style ={{
             height: "50px",
             width: "10px",
-            background: "black",
+            background: "white",
             position: "absolute",
             top: 0,
-            right: "480px" ,       
+            right: "480px" ,      
         }}/>
         <div style = {{
             height: "10px", 
             width: "200px", 
-            background: "black", 
+            background: "white", 
             marginLeft: "120px" 
         }}/> 
 
         <div style = {{ 
             height: "400px", 
             width: "10px", 
-            background: "black" , 
+            background: "white" , 
             marginLeft: "120px"
         }}/>
 
-        <div style = {{ height: "10px", width: "250px", background: "black" }} />
+        <div style = {{ height: "10px", width: "250px", background: "white" }} />
 
 
     </div>

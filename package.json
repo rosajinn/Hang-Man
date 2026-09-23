@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tsparticles/confetti": "^4.4.0",
     "react": "^19.2.8",
+    "react-confetti": "^6.4.0",
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
